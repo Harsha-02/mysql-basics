@@ -1,0 +1,10 @@
+create table class(clsno int primary key,clname varchar(10),tutname varchar(20),clstr int);
+create table updatelog(clsno int,clname varchar(10),tutname varchar(20),clstr int);
+insert into class values(8,'nithin','bineesh',59),(4,'Anurag','lufiya',89),(3,'Albert','Aneesh',49),(1,'gs','lufiya',NULL);
+select * from class;
+select * from class order by clstr;
+select clname,clstr from class where clstr BETWEEN 30 and 60 order by clstr desc;
+select clname from class where clname like 'A%' and clstr not in(49,59);
+select tutname from class group by tutname having min(clstr) > 50;
+select tutname from class group by tutname ;
+select * from class where clstr is null;
